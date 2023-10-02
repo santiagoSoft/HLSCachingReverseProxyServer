@@ -15,7 +15,7 @@ let package = Package(
     .package(url: "https://github.com/devxoul/SafeCollection.git", .upToNextMajor(from: "3.1.0")),
   ],
   targets: [
-    .target(name: "HLSCachingReverseProxyServer"),
+    .target(name: "HLSCachingReverseProxyServer", dependencies: ["Nimble", "SafeCollection"], path: "Source", exclude: ["Info.plist"]),
     .testTarget(name: "HLSCachingReverseProxyServerTests", dependencies: ["HLSCachingReverseProxyServer", "Nimble", "SafeCollection"]),
   ]
 )
